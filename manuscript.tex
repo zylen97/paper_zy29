@@ -1,0 +1,215 @@
+% !TEX program = pdflatex
+
+% Elsarticle document class: review format, 10pt, author-year citation style
+\documentclass[authoryear,preprint,review,times,10pt]{elsarticle}
+
+% ===== Package imports =====
+% Math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+% Graphics path chain: pre-finalize -> post-finalize -> fallback
+\graphicspath{{structure/figures_tables/figures/}{figures_tables/figures/}{figures/}}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{threeparttable}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usepackage{lineno}
+\usepackage{setspace}
+\doublespacing
+
+% Margins (draft stage; comment out before submission)
+\usepackage{geometry}
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm,
+}
+
+\usepackage{hyperref}
+
+% Remove the double rule after frontmatter, keep Email display
+\makeatletter
+\def\ps@pprintTitle{%
+  \let\@oddhead\@empty
+  \let\@evenhead\@empty
+  \def\@oddfoot{\hfil\thepage\hfil}%
+  \let\@evenfoot\@oddfoot}
+\def\pprintMaketitle{\clearpage
+  \iflongmktitle\if@twocolumn\let\columnwidth=\textwidth\fi\fi
+  \resetTitleCounters
+  \def\baselinestretch{1}%
+  \printFirstPageNotes
+  \begin{center}%
+   \thispagestyle{pprintTitle}%
+   \def\baselinestretch{1}%
+    \Large\@title\par\vskip18pt
+    \normalsize\elsauthors\par\vskip10pt
+    \normalsize\itshape\elsaddress\par\vskip10pt
+    \ifvoid\absbox\else\unvbox\absbox\par\vskip10pt\fi
+    \ifvoid\keybox\else\unvbox\keybox\par\vskip10pt\fi
+  \end{center}%
+  \gdef\thefootnote{\arabic{footnote}}%
+  }
+\makeatother
+
+% Target journal (fill in before submission)
+\journal{}
+
+\begin{document}
+
+% Line numbering for review format
+\modulolinenumbers[1]
+\runninglinenumbers
+\begin{frontmatter}
+
+\title{Negative-transfer-aware cross-asset knowledge transfer for infrastructure deterioration prediction}
+
+% === AUTHOR INFO (uncomment and fill in before submission) ===
+% \author[labela]{First Author}
+% \ead{first.author@example.com}
+% \author[labelb]{Second Author\corref{cor1}}
+% \ead{second.author@example.com}
+% \author[labelc]{Third Author}
+% \ead{third.author@example.com}
+%
+% \cortext[cor1]{Corresponding author.}
+%
+% \affiliation[labela]{organization={School/Department, University},
+%             city={City},
+%             postcode={000000},
+%             country={Country}}
+%
+% \affiliation[labelb]{organization={School/Department, University},
+%             city={City},
+%             postcode={000000},
+%             country={Country}}
+%
+% \affiliation[labelc]{organization={School/Department, University},
+%             city={City},
+%             postcode={000000},
+%             country={Country}}
+% === END AUTHOR INFO ===
+
+\begin{abstract}
+% TODO: Write abstract here
+\end{abstract}
+
+\begin{keyword}
+% knowledge transfer \sep negative transfer \sep infrastructure asset management
+\end{keyword}
+
+\end{frontmatter}
+
+% ===== Main body =====
+
+\section{Introduction}
+% TODO: Write content here
+
+\section{Literature review}
+\subsection{Subsection title}
+% TODO: Write content here
+
+\subsection{Subsection title}
+% TODO: Write content here
+
+\subsection{Subsection title}
+% TODO: Write content here
+
+\subsection{Research gaps and positioning}
+% TODO: Write content here
+
+\section{Methodology}
+\subsection{Problem formulation}
+% TODO: Write content here
+
+\subsection{Cross-asset knowledge transfer framework}
+% TODO: Write content here
+
+\subsection{Source-asset gating and negative-transfer detection}
+% TODO: Write content here
+
+\subsection{Deterioration prediction model}
+% TODO: Write content here
+
+\section{Results}
+\subsection{Data and experimental design}
+% TODO: Write content here
+
+\subsection{Prediction performance}
+% TODO: Write content here
+
+\subsection{Negative transfer analysis}
+% TODO: Write content here
+
+\subsection{Ablation and robustness checks}
+% TODO: Write content here
+
+\section{Numerical analysis}
+\subsection{Cold-start and sparse-history scenarios}
+% TODO: Write content here
+
+\subsection{Managerial value for maintenance prioritization}
+% TODO: Write content here
+
+\section{Discussion}
+\subsection{Discussion on the research questions}
+% TODO: Write content here
+
+\subsection{Theoretical implications}
+% TODO: Write content here
+
+\subsection{Practical implications}
+% TODO: Write content here
+
+
+\section{Conclusion}
+% TODO: Write content here
+
+\section*{Data availability statement}
+% TODO: Write data availability statement here
+
+\section*{Declaration of competing interest}
+% TODO: Write declaration here
+
+% ===== References =====
+\bibliographystyle{elsarticle-harv}
+\bibliography{zy29}
+
+% ===== Table template (copy to use) =====
+
+% \begin{table}[!htbp]
+% \centering
+% \captionsetup{font=normalsize, labelsep=period}
+% \setlength{\abovecaptionskip}{5pt}
+% \setlength{\belowcaptionskip}{0pt}
+% \caption{Table title here}
+% \label{tab:label_name}
+% \small
+% \begin{threeparttable}
+% \begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}}lccccccc}
+% \toprule
+% \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} & \textbf{Column 4} \\
+% \midrule
+% \textit{Row 1} & Data & Data & Data \\
+% \textit{Row 2} & Data & Data & Data \\
+% \textit{Row 3} & Data & Data & Data \\
+% \bottomrule
+% \end{tabular*}
+% \begin{tablenotes}[flushleft]
+% \small\linespread{1}\selectfont
+% \item \textit{Note}: Table notes here.
+% \end{tablenotes}
+% \end{threeparttable}
+% \end{table}
+% \vspace{-15pt}
+
+\end{document}
