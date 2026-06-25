@@ -1,0 +1,55 @@
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.spl
+*.xdv
+
+# Build directory
+build/
+
+# Auto-generated track changes (latexdiff output)
+manuscript-track-changes.tex
+
+# PDF output
+*.pdf
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.backup
+
+# Agent local settings (don't track)
+.codex/settings.local.json
+.claude/settings.local.json
+
+# Data files (track scripts, ignore large data)
+data/raw/
+data/processed/*.rds
+data/processed/*.csv
+data/models/*.rds
+data/models/*.RData
+data/robustness/*.rds
+data/_archive/
